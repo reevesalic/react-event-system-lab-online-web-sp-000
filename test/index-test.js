@@ -46,12 +46,12 @@ describe('<EyesOnMe />', () => {
   it('should trigger console output when focusing', () => {
     wrapper.find('button').simulate('focus');
     expect(spy.calledOnce, 'The console output is not being triggered when focusing the button').to.be.true;
-    expect(spy.firstCall.args[0]).to.equal('Good!', 'The console output is not the expected string.');
+    expect(spy.firstCall.args[0]).to.equal('Good!', 'The console output is not the expected string.'); 
   });
 
   it('should trigger console output when removing focus (blur)', () => {
     wrapper.find('button').simulate('blur');
     expect(spy.calledOnce, 'The console output is not being triggered when focusing the button').to.be.true;
-    expect(spy.firstCall.args[0]).to.equal('Hey! Eyes on me!', 'The console output is not the expected string.'); --exit
+    expect(spy.firstCall.args[0]).to.equal('Hey! Eyes on me!', 'The console output is not the expected string.'); 
   });
 });
